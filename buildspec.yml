@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+ pre_build:
+  commands:
+  - echo "hello-me-coments"
+ build:
+  commands:
+  - echo "build phase"
+  - mvn clean package
+ post_build:
+  commands:
+  - echo "post build phase"
+  - mv target/*.jar demoJava.jar
+artifacts:
+ files:
+  - demoJava.jar
