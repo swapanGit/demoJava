@@ -2,7 +2,7 @@ version: 0.2
 phases:
  pre_build:
   commands:
-  - echo "hello-me-coments"
+  - echo "hello-me-comments"
  build:
   commands:
   - echo "build phase"
