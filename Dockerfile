@@ -1,4 +1,4 @@
-FROM amazoncorretto:8-alpine-jdk
+FROM openjdk:8
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} demoJava.jar
 ENTRYPOINT ["java","-jar","/demoJava.jar"]
