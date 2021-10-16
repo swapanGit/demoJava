@@ -13,7 +13,7 @@ phases:
       - mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
       - echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
       - source ~/.bashrc
-      - echo "$AWS_DEFAULT_REGION"
+      - echo "$AWS_DEFAULT_REGION == $AWS_CLUSTER_NAME"
   pre_build:
     commands:
       - echo Entered the pre_build phase...
