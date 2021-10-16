@@ -42,6 +42,7 @@ phases:
       - echo "Writing image definitions file..."
       - printf '[{"name":"order-service","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json
+      - kubectl apply -f deployment.yaml
 artifacts:
   files:
    - imagedefinitions.json
